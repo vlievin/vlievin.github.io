@@ -71,13 +71,13 @@
 
       <div class = "container margin-top">
         <h2>About me</h2>
-        <p>Enginering students in Digital Media Engineering.
-            Currently following an internation joint program in Data Interaction between DTU  (Copenhaguen, Denmark) and KAIST (Daejeon 대전시, South Korea).</p>
+        <p>Enginering students in Digital Media Engineering preparing engineering degrees between the Ecole Centrale de Nantes (Genral Engineering), DTU (Digital Media Engineering) and KAIST (Data Interaction). 
 
-            <p>Also student in France at the Ecole Centrale de Nantes int the context of the TIME network (Top Industrial Managers for Europe).</p>
+        <p>I am currently a Dual degree in Data Interaction between DTU (Copenhaguen, Denmark) and KAIST (Daejeon 대전시, South Korea). Previously, thanks to the TIME network (Top Industrial Managers for Europe), I have studied 2 years at the Ecole Centrale de Nantes after I have succeed in a nationwide selective exam with numerus claususis called Concours Centrale-Supelec.</p>
 
-            <p>Currently working as a student programmer with DTU Compute on the behalf of EasyTranslate</p>
-        <p>Passionate about Computer Sciences, AI, Arts, Mountain and Cats.</p>
+        <p>I am currently working as a student programmer with DTU Compute on the behalf of EasyTranslate. I am currently working on improving machine translation using information about context.</p>
+
+        <p>I like Computer Sciences, AI, New Technologies, Drawing, Photgraphy, Mountain Sports, Running, Cats and more generally, the internet culture.</p>
       </div>
 
       <div class = "container margin-top">
@@ -131,7 +131,7 @@
   <script type=text/javascript>
     var colors =  ["#61F9FF", "#58E8C6", "#6EFFB4", "#58E875", "#70FF61", "#34495e", "#e67e22"]
     var data = [
-              {'start' : 2011, 'end': 2013 , 'name' : 'classes préparatoires' },
+              {'start' : 2011, 'end': 2013 , 'name' : 'Classes Préparatoires' },
               {'start' : 2013, 'end': 2015 , 'name' : 'Centrale Nantes' },
               {'start' : 2015, 'end': 2016 , 'name' : 'DTU' },
               {'start' : 2016, 'end': 2017 , 'name' : 'KAIST' }
@@ -146,12 +146,13 @@
     {
       var w = $("#"+divID).width(); // width
       var h = $("#"+divID).height(); // height
+      var margin = 20;
       var middle = h/2;
       width = 50;
 
       var x = d3.scale.linear()
         .domain([2011, 2017])
-        .range([0, w]);
+        .range([margin, w-margin]);
 
       var svg = d3.select("#"+divID).append("svg:svg")
               .attr("width", w )
@@ -175,8 +176,29 @@
                           .attr("fill", "white")
                           .text( data[i].name)
                           .attr("x" , 0.5*(x(data[i].start) + x(data[i].end) ) )
-                          .attr("y" , middle + 5) ; 
+                          .attr("y" , middle + 5) ;
 
+          var date =  svg.append("text")
+                          .style("text-anchor", "middle")
+                          .attr("font-size", "16px")
+                          .attr("font-familly" , "Lato")
+                          .attr("fill", "white")
+                          .text( data[i].end)
+                          .attr("x" , x(data[i].end) )
+                          .attr("y" , middle + width) ;
+
+          if ( i == 0)
+          {
+            var date_begin =  svg.append("text")
+                          .style("text-anchor", "middle")
+                          .attr("font-size", "16px")
+                          .attr("font-familly" , "Lato")
+                          .attr("fill", "white")
+                          .text( data[i].start)
+                          .attr("x" , x(data[i].start) )
+                          .attr("y" , middle + width ) ;
+          }
+        
 
       }
 
