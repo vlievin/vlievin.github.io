@@ -83,7 +83,18 @@
       <div class = "container margin-top">
         <h2>Projects</h2>
         <div class="row">
-          <div class="col-md-4 margin-top">
+          <div class="col-md-3 margin-top">
+            <div class="w3-card-8">
+              <header class="w3-container w3-white">
+                <h1>AR Pool</h1>
+              </header>
+              <div class="w3-container">
+                <p>One of my first computer sciences project. The project aims to help the pool players using augmented reality.</p>
+              </div>
+              <a href="https://github.com/CheatingBilliard/ProjetRVBillard"><button  class="w3-btn-block w3-white">+ See More</button></a>
+            </div>
+          </div>
+          <div class="col-md-3 margin-top">
             <div class="w3-card-8">
               <header class="w3-container w3-white">
                 <h1>HeavyM</h1>
@@ -95,7 +106,7 @@
               <a href="https://heavym.net/en/"><button  class="w3-btn-block w3-white">+ See More</button></a>
             </div>
           </div>
-          <div class="col-md-4 margin-top">
+          <div class="col-md-3 margin-top">
             <div class="w3-card-8">
               <header class="w3-container w3-white">
                 <h1>DeepReader</h1>
@@ -107,7 +118,7 @@
               <a href="https://deepreader.herokuapp.com/"><button  class="w3-btn-block w3-white">+ See More</button></a>
             </div>
           </div>
-          <div class="col-md-4 margin-top">
+          <div class="col-md-3 margin-top">
             <div class="w3-card-8">
               <header class="w3-container w3-white">
                 <h1>TriangulateJS</h1>
@@ -157,18 +168,33 @@
       var svg = d3.select("#"+divID).append("svg:svg")
               .attr("width", w )
               .attr("height", h)
-              .append("svg:g")
+              .append("svg:g");
+
+      svg.selectAll("bar")
+        .data(data)
+        .enter()
+          .append("g")
+            .append("rect")
+            .style("fill", function(d,i){ return  colors[i]; })
+            .attr("x", function(d) { return x(d.start); })
+            .attr("width", function(d){ return Math.abs(x(d.end) - x(d.start)); })
+            .attr("y", middle - width/2 )
+            .attr("height", width)
+            .on( "mouseout" ,function(d,i)
+              {
+                d3.select(this).transition().style("fill", colors[i] );
+              }
+            )
+            .on( "mouseover" ,function()
+              {
+                d3.select(this).transition().style("fill", "black");
+              }
+            );
+
+
 
       for (var i = 0; i < data.length; i++)
       {
-          var line = svg.append("line")
-                          .attr("x1" , x(data[i].start) )
-                          .attr("y1" , middle )
-                          .attr("x2" , x(data[i].end) )
-                          .attr("y2" , middle )
-                          .attr("stroke-width", width)
-                          .attr("stroke", colors[i]);
-
           var text = svg.append("text")
                           .style("text-anchor", "middle")
                           .attr("font-size", "20px")
@@ -201,7 +227,6 @@
         
 
       }
-
 
     }
   </script
