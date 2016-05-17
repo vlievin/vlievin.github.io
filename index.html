@@ -70,14 +70,14 @@
   <body>
 
     <div class = "container-fluid">
-      <div class = "container margin-top-bottom">
+      <div class = "container-fluid margin-top-bottom">
         <h1>Valentin Liévin</h1>
         <p>Enginering students in Digital Media Engineering and student programmer in Knowledge-based systems.</p>
         <p>[ This page is under development ]</p>
       </div>
 
 
-      <div class = "container margin-top-bottom">
+      <div class = "container-fluid margin-top-bottom">
         <h2>About me</h2>
         <p>Enginering students in Digital Media Engineering preparing engineering degrees between the Ecole Centrale de Nantes (Genral Engineering), DTU (Digital Media Engineering) and KAIST (Data Interaction). 
 
@@ -88,7 +88,7 @@
         <p>Besides my studies, I like new technologies, AI, drawing, photgraphy, mountain sports, running, cats and more generally, the internet culture. </p>
       </div>
 
-      <div class = "container margin-top-bottom">
+      <div class = "container-fluid margin-top-bottom">
         <h2>Projects</h2>
         <div class="row">
           <div class="col-md-3 margin-top-bottom">
@@ -139,9 +139,9 @@
           </div>
         </div>
       </div>
-      <div class = "container margin-top-bottom">
+      <div class = "container-fluid margin-top-bottom">
         <h2>Education</h2>
-        <div id="education-viz" style="width:100%; height:200px;">
+        <div id="education-viz" style="width:100%; height:500px;">
         </div>
       </div>
     </div>
@@ -150,10 +150,10 @@
   <script type=text/javascript>
     var colors =  ["#61F9FF", "#58E8C6", "#6EFFB4", "#58E875", "#70FF61", "#34495e", "#e67e22"]
     var data = [
-              {'start' : 2011, 'end': 2013 , 'name' : 'Classes Préparatoires' },
-              {'start' : 2013, 'end': 2015 , 'name' : 'Centrale Nantes' },
-              {'start' : 2015, 'end': 2016 , 'name' : 'DTU' },
-              {'start' : 2016, 'end': 2017 , 'name' : 'KAIST' }
+              {'start' : 2011, 'end': 2013 , 'name' : 'Classes Préparatoires' , 'skills' : ['Maths' , 'Physics' ] },
+              {'start' : 2013, 'end': 2015 , 'name' : 'Centrale Nantes' , 'skills' : ['Maths' , 'Management' , 'Virtual Reality']},
+              {'start' : 2015, 'end': 2016 , 'name' : 'DTU' , 'skills' : ['UX' , 'Data Science' ]},
+              {'start' : 2016, 'end': 2017 , 'name' : 'KAIST' , 'skills' : ['Data Science'] }
               ];
     drawEducation("education-viz" , data);
     window.onresize = function() {    
@@ -173,33 +173,68 @@
         .domain([2011, 2017])
         .range([margin, w-margin]);
 
+
+
+
       var svg = d3.select("#"+divID).append("svg:svg")
               .attr("width", w )
               .attr("height", h)
               .append("svg:g");
 
+
+      var tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+
       svg.selectAll("bar")
         .data(data)
         .enter()
-          .append("g")
             .append("rect")
             .style("fill", function(d,i){ return  colors[i]; })
             .attr("x", function(d) { return x(d.start); })
             .attr("width", function(d){ return Math.abs(x(d.end) - x(d.start)); })
-            .attr("y", middle - width/2 )
+            .attr("y", 1.5 * width )
             .attr("height", width)
             .on( "mouseout" ,function(d,i)
               {
-                d3.select(this).transition().style("fill", colors[i] );
-              }
+                d3.select(this).transition().duration(300)
+                                .attr("x", function(d) { return x(d.start); })
+                                .attr("width", function(d){ return Math.abs(x(d.end) - x(d.start)); })
+                                .attr("height", width)
+                d3.select(this).style("cursor", "default")
+                                  }
             )
             .on( "mouseover" ,function()
               {
-                d3.select(this).transition().style("fill", "black");
+                d3.select(this).style("cursor", "pointer")
+
               }
-            );
+            )
+            .on("click" , function(d,i){
 
+              var THIS = this;
+              setTimeout( function(){ d3.select(THIS).moveToBack(); } , 0 );
+              d3.select(this).transition()
+                                .attr("x", margin)
+                                .attr("width", w-2*margin)
+                                .attr("height", h - 2*width);
 
+              d3.select(this).style("cursor", "default");
+
+              setTimeout( function(){ 
+
+                    /*console.log(THIS.getBBox());
+                    tooltip.transition()
+                        .duration(300)
+                        .style("opacity" , 1)
+                        .text("HELLO WORLD")
+                        .style("left", THIS.parentNode.getBBox().x + "px")
+                        .style("top", (THIS.getBBox().y + width)+"px");*/
+
+                } , 0 );
+              
+              });
 
       for (var i = 0; i < data.length; i++)
       {
@@ -210,7 +245,7 @@
                           .attr("fill", "white")
                           .text( data[i].name)
                           .attr("x" , 0.5*(x(data[i].start) + x(data[i].end) ) )
-                          .attr("y" , middle + 5) ;
+                          .attr("y" , 2*width + 5) ;
 
           var date =  svg.append("text")
                           .style("text-anchor", "middle")
@@ -219,7 +254,7 @@
                           .attr("fill", "white")
                           .text( data[i].end)
                           .attr("x" , x(data[i].end) )
-                          .attr("y" , middle + width) ;
+                          .attr("y" , width) ;
 
           if ( i == 0)
           {
@@ -230,11 +265,18 @@
                           .attr("fill", "white")
                           .text( data[i].start)
                           .attr("x" , x(data[i].start) )
-                          .attr("y" , middle + width ) ;
+                          .attr("y" ,  width ) ;
           }
-        
-
       }
+
+      d3.selection.prototype.moveToBack = function() { 
+    return this.each(function() { 
+        var firstChild = this.parentNode.firstChild; 
+        if (firstChild) { 
+            this.parentNode.insertBefore(this, firstChild); 
+        } 
+    }); 
+};
 
     }
   </script
