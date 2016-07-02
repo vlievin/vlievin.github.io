@@ -5,7 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Valentin Liévin's personal website</title>
     <ink href="//getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-      <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -19,6 +18,9 @@
           href="https://fonts.googleapis.com/css?family=Lato:light">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Lato">
+
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
     <style>
 
       .box-shadow--2dp {
@@ -40,20 +42,9 @@
         box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
       }
       body {
-        background-color: #555;
-        font-family: 'Lato';
-        font-style:light;
-        font-weight: 300;
-        color: #EEE;
-      }
-      h1 {
-        font-family: 'Lato';
-        font-style:bold;
-        font-weight: 900;
-      }
-      h2 {
-        font-family: 'Lato';
-        font-weight: 500;
+        background-color: #EEE ;
+        font-family: 'Space Mono';
+        color: #555;
       }
       .margin-top-bottom{
         margin-top: 10px;
@@ -63,6 +54,9 @@
       .car_header{
         background-color: #EEE;
         color: #333;
+
+      }
+      .projectContainerFooter {
 
       }
     </style
@@ -92,51 +86,69 @@
         <h2>Projects</h2>
         <div class="row">
           <div class="col-md-3 margin-top-bottom">
-            <div class="w3-card-8">
-              <div class="w3-container car_header">
+            <div class="projectContainer">
+              <div class="w3-container">
                 <h3>AR Pool</h3>
+              </div>
+              <div class="w3-container">
+                <i>October 2014 - January 2015</i>
               </div>
               <div class="w3-container margin-top-bottom">
                 <p>One of my first computer sciences project. The project aims to help the pool players using augmented reality.</p>
               </div>
-              <a href="https://github.com/CheatingBilliard/ProjetRVBillard"><button  class="w3-btn-block w3-white">+ See More</button></a>
+              <a href="https://github.com/CheatingBilliard/ProjetRVBillard"><button  class="btn-link">+ See More</button></a>
             </div>
           </div>
           <div class="col-md-3 margin-top-bottom">
-            <div class="w3-card-8">
-              <div class="w3-container car_header">
+            <div class="projectContainer">
+              <div class="w3-container">
                 <h3>HeavyM</h3>
+              </div>
+              <div class="w3-container">
+                <i>March 2015 - August 2015</i>
               </div>
               <div class="w3-container margin-top-bottom">
                 <p> HeavyM is an intuitive projection mapping software, it is currently running in beta version. It allows the creation and projection of visual animations with great facility, in order to be projected on real surfaces with a projector. </p>
                 <p>As an intern, my role was to developp from scratch the new version of the software announced during the Kickstarter campagne.</p>
               </div>
-              <a href="https://heavym.net/en/"><button  class="w3-btn-block w3-white">+ See More</button></a>
+              <a href="https://heavym.net/en/"><button  class="btn-link">+ See More</button></a>
             </div>
           </div>
           <div class="col-md-3 margin-top-bottom">
-            <div class="w3-card-8">
-              <div class="w3-container car_header">
+            <div class="projectContainer">
+              <div class="w3-container">
                 <h3>DeepReader</h3>
+              </div>
+              <div class="w3-container">
+                <i>October 2015 - December 2015</i>
               </div>
               <div class="w3-container margin-top-bottom">
                 <p>This project involves natural language processing and network science.Its development is part of our MSc Digital Media Engineering at DTU and is through collaboration with EasyTranslate.</p>
                 <p>The project aims to provide a tool to understand a text without having to read it. We make it possible to explore a corpus of texts and display the relations between them.</p>
               </div>
-              <a href="https://deepreader.herokuapp.com/"><button  class="w3-btn-block w3-white">+ See More</button></a>
+              <a href="https://deepreader.herokuapp.com/"><button  class="btn-link">+ See More</button></a>
             </div>
           </div>
           <div class="col-md-3 margin-top-bottom">
-            <div class="w3-card-8">
-              <div class="w3-container car_header">
+            <div class="projectContainer">
+              <div class="w3-container">
                 <h3>TriangulateJS</h3>
+              </div>
+              <div class="w3-container">
+                <i>March 2016</i>
               </div>
               <div class="w3-container margin-top-bottom">
                 <p>A short personal project made during holidays. This app generates automatically a polygon art from any image using Delaunay triangulation and contour detection. The app was originally coded with Python, but it is now running with Javascript.</p>
               </div>
-              <a href="http://vlievin.github.io/triangulateJS/"><button  class="w3-btn-block w3-white">+ See More</button></a>
+              <a href="http://vlievin.github.io/triangulateJS/"><button  class="btn-link">+ See More</button></a>
             </div>
           </div>
+        </div>
+      </div>
+      <div class = "container-fluid margin-top-bottom">
+        <h2>Creations</h2>
+        <div id="Creations">
+        <p>[To be completed] (Blender, photographies, drawings, instagram)</p>
         </div>
       </div>
       <div class = "container-fluid margin-top-bottom">
@@ -147,6 +159,8 @@
     </div>
   </body>
 
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  
   <script type=text/javascript>
     var colors =  ["#61F9FF", "#58E8C6", "#6EFFB4", "#58E875", "#70FF61", "#34495e", "#e67e22"]
     var data = [
