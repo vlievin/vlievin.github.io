@@ -34,9 +34,11 @@ body{
 </div> -->
 
 <div style="text-align:center;">
-    <canvas id="myCanvas" width="400" height="600px" style="bposition:absolute;
+    <canvas id="myCanvas" width="400" height="600px"></canvas> 
+<!-- style="bposition:absolute;
     width:100%;
-    height:100%;"></canvas>
+    height:100%; -->
+
 </div>
 
 <script>
@@ -103,7 +105,9 @@ var myGameArea = {
             myGameArea.key = false;
         })
         window.addEventListener('touchmove', function (e) {
-            if ( e.touches[0].screenX < ww/2)
+            console.log("move");
+            var rect = document.getElementById("myCanvas").getBoundingClientRect();
+            if ( e.touches[0].screenX - rect.left < ww/2)
             {
                 rightTouch = false;
             }
@@ -112,9 +116,12 @@ var myGameArea = {
                 rightTouch = true;
             }
         })
-        window.addEventListener('touchStart', function (e) {
+        window.addEventListener('touchstart', function (e) {
             touch = true;
-            if ( e.touches[0].screenX < ww/2)
+            var rect = document.getElementById("myCanvas").getBoundingClientRect();
+            console.log(e.touches[0].screenX);
+            console.log(rect.left);
+            if ( e.touches[0].screenX - rect.left < ww/2)
             {
                 rightTouch = false;
             }
@@ -123,7 +130,7 @@ var myGameArea = {
                 rightTouch = true;
             }
         })
-        window.addEventListener('touchStart', function (e) {
+        window.addEventListener('touchend', function (e) {
             touch = false;
         })
 
@@ -254,7 +261,6 @@ function rowManager( n, speed , distance ){
     }
     this.increaseSpeed = function(){
         this.setSpeed(this.speed + speed_increase_coeff)
-        console.log(this.speed);
     }
     this.updatePos = function(){
         this.childs.forEach( function (row){
