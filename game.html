@@ -67,6 +67,8 @@ var obstacle_color = "#555"
 
 var player_size = 2 / 3 * obstacle_size
 
+var current_canvas = document.getElementById("myCanvas");
+
 var touch = false;
 var rightTouch = true;
 
@@ -106,7 +108,7 @@ var myGameArea = {
         })
         window.addEventListener('touchmove', function (e) {
             console.log("move");
-            var rect = document.getElementById("myCanvas").getBoundingClientRect();
+            var rect = current_canvas.getBoundingClientRect();
             if ( e.touches[0].screenX - rect.left < ww/2)
             {
                 rightTouch = false;
@@ -118,7 +120,7 @@ var myGameArea = {
         })
         window.addEventListener('touchstart', function (e) {
             touch = true;
-            var rect = document.getElementById("myCanvas").getBoundingClientRect();
+            var rect = current_canvas.getBoundingClientRect();
             console.log(e.touches[0].screenX);
             console.log(rect.left);
             if ( e.touches[0].screenX - rect.left < ww/2)
