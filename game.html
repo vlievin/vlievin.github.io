@@ -29,9 +29,9 @@ body{
 </head>
 <body onload="startGame()">
 
-<div class="jumbotron text-center">
+<!-- <div class="jumbotron text-center">
   <h1>Escape</h1> 
-</div>
+</div> -->
 
 <div style="text-align:center;">
     <canvas id="myCanvas" width="400" height="600px" style="bposition:absolute;
@@ -60,10 +60,13 @@ var dist_rows = 80
 var row_speed = 4.0;
 var score = 0;
 var speed_increase_coeff = 0.04;
-player_color = "#333"
-obstacle_color = "#555"
+var player_color = "#333"
+var obstacle_color = "#555"
 
-player_size = 2 / 3 * obstacle_size
+var player_size = 2 / 3 * obstacle_size
+
+var touch = false;
+var rightTouch = true;
 
 function startGame() {
     myGameArea.start();
@@ -102,12 +105,26 @@ var myGameArea = {
         window.addEventListener('touchmove', function (e) {
             if ( e.touches[0].screenX < ww/2)
             {
-                myGamePiece.speedX += -power;
+                rightTouch = false;
             }
             else
             {
-                myGamePiece.speedX += power;
+                rightTouch = true;
             }
+        })
+        window.addEventListener('touchStart', function (e) {
+            touch = true;
+            if ( e.touches[0].screenX < ww/2)
+            {
+                rightTouch = false;
+            }
+            else
+            {
+                rightTouch = true;
+            }
+        })
+        window.addEventListener('touchStart', function (e) {
+            touch = false;
         })
 
     }, 
@@ -292,6 +309,15 @@ function updateGameArea() {
         if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX += power; }
         if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY += -power; }
         if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY += power; }
+        if (touch){
+            if (rightTouch){
+                myGamePiece.speedX += power;
+            }
+            else
+            {
+                myGamePiece.speedX += -power;
+            }
+        }
 
         myGamePiece.newPos(myGameArea.canvas); 
         myGamePiece.update();
