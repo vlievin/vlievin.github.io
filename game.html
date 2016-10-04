@@ -107,7 +107,6 @@ var myGameArea = {
             myGameArea.key = false;
         })
         window.addEventListener('touchmove', function (e) {
-            console.log("move");
             var rect = current_canvas.getBoundingClientRect();
             if ( e.touches[0].screenX - rect.left < ww/2)
             {
@@ -121,8 +120,6 @@ var myGameArea = {
         window.addEventListener('touchstart', function (e) {
             touch = true;
             var rect = current_canvas.getBoundingClientRect();
-            console.log(e.touches[0].screenX);
-            console.log(rect.left);
             if ( e.touches[0].screenX - rect.left < ww/2)
             {
                 rightTouch = false;
