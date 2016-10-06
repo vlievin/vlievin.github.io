@@ -286,17 +286,26 @@ function rowManager( n, speed , distance ){
             this.increaseSpeed();
         }
     }
-    this.isPointIntersect = function(point){
-        lastRow = this.childs[this.childs.length - 1];
-        return ( lastRow.h - obstacle_size / 2 < point.y  &&  lastRow.h + obstacle_size / 2 > point.y)
+    this.isPointIntersect = function(point, row){
+        return ( row.h - obstacle_size / 2 < point.y  &&  row.h + obstacle_size / 2 > point.y)
+    }
+    this.intersectRow = function(player, row){
+        intersect = false;
+        if ( this.isPointIntersect(player.getLeft() ,row ) || this.isPointIntersect( player.getRight(), row ) || this.isPointIntersect( player.getTop(), row ) ){
+                console.log(row);
+                if (row.intersect(player) ){ intersect = true; }
+        }
+        return intersect;
     }
     this.intersect = function(player){
-        if ( this.isPointIntersect(player.getLeft() ) || this.isPointIntersect( player.getRight() ) || this.isPointIntersect( player.getTop() ) ){
-            intersect = false;
-            lastRow = this.childs[this.childs.length - 1];
-            return lastRow.intersect(player);
-        }
+        x = false;
+        tmp = this;
+        this.childs.forEach( function (row){
+            if ( tmp.intersectRow(player,row)){x = true;}
+        });
+        return x;
     }
+
     this.drawScore = function(ctx){
         ctx.font="20px Space Mono";
         ctx.fillStyle="white";
@@ -308,7 +317,7 @@ function rowManager( n, speed , distance ){
 function updateGameArea() {
     myGameArea.clear();
     testManager.updateRows();
-    if (testManager.intersect(myGamePiece)) { pause = true }
+    
     if (!pause){
         if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX += -power; }
         if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX += power; }
@@ -337,6 +346,7 @@ function updateGameArea() {
     }
     testManager.draw(myGameArea.context);
     testManager.drawScore(myGameArea.context);
+    if (testManager.intersect(myGamePiece)) { pause = true }
     
 }
 
