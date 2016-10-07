@@ -5,12 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
 canvas {
-    border:1px solid #d3d3d3;
+    border:0px solid #d3d3d3;
     background-color: #eee;
 }
 body{
-    background-color: #ddd;
+    background-color: red;
     font-family: Space Mono;
+}
+.colBackground{
+    background-color: #f39c12;
 }
 </style>
 <!-- Latest compiled and minified CSS -->
@@ -33,7 +36,7 @@ body{
   <h1>Escape</h1> 
 </div> -->
 
-<div style="text-align:center;">
+<div  style="text-align:center;">
     <canvas id="myCanvas" width="400" height="600px"></canvas> 
 <!-- style="bposition:absolute;
     width:100%;
@@ -65,7 +68,7 @@ var speed_increase_coeff = 0.04;
 var player_color = "#333"
 var obstacle_color = "#555"
 
-var player_size = 2 / 3 * obstacle_size
+var player_size = 2 / 3 * obstacle_size;
 
 var current_canvas = document.getElementById("myCanvas");
 
@@ -73,14 +76,16 @@ var touch = false;
 var rightTouch = true;
 
 function startGame() {
+    pause = false;
+    dist_rows = 80;
+    row_speed = 4.0;
+    score = 0;
     myGameArea.start();
     myGamePiece = new player(player_size, player_size, player_color, xx, yy);
     xx = ww/2;
     yy = hh - 90;
     testManager = new rowManager(max_obstacles_per_row - 5, row_speed , dist_rows );
     testManager.createRow();
-    row_speed = 4.0;
-    score = 0;
 }
 
 function pause()
@@ -323,6 +328,7 @@ function updateGameArea() {
         if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX += power; }
         if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY += -power; }
         if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY += power; }
+        if (myGameArea.key && myGameArea.key == 13) { startGame(); return 0; }
         if (touch){
             if (rightTouch){
                 myGamePiece.speedX += power;
