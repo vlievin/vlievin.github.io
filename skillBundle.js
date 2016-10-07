@@ -34,9 +34,9 @@ data = [
 {"name":"KAIST.Social Computing Systems","size":1,"imports":["KAIST.Ubiquitious Computing","KAIST.Data Mining", "DTU.Social Graphs"]},
 {"name":"KAIST.Web Technologies (HTML/CSS/Js/XML)","size":1,"imports":["ECN.Algorithms and programming", "ECN.Information Systems"]},
 
-{"name":"Perso.Deep Learning","size":1,"imports":["Perso.Tensorflow", "DTU.python", "KAIST.Data Mining", "Classes prepa.mathematics","ECN.Engineering mathematics" , "DTU.Tools for Big Data", "KAIST.Analytical Methodologies for Big Data", "KAIST.Data Mining"]},
+{"name":"Perso.Deep Learning","size":2,"imports":["Perso.Tensorflow", "DTU.python", "KAIST.Data Mining", "Classes prepa.mathematics","ECN.Engineering mathematics" , "DTU.Tools for Big Data", "KAIST.Analytical Methodologies for Big Data", "KAIST.Data Mining"]},
 {"name":"Perso.Flask","size":1,"imports":["DTU.python", "KAIST.Web Technologies (HTML/CSS/Js/XML)"]},
-{"name":"Perso.Tensorflow","size":1,"imports":["DTU.python"]}
+{"name":"Perso.Tensorflow","size":3,"imports":["DTU.python"]}
 // {"name":"economy","size":3812,"imports":["maths"]},
 // {"name":"programming","size":3812,"imports":[""]},
 // {"name":"OpenGL","size":3812,"imports":["programming"]},
@@ -94,6 +94,7 @@ function drawBundleSkills(divID){
     .enter().append("text")
       .attr("class", "node")
       .attr("dy", ".31em")
+      .style("font-size", function(d) { d.size * 12 +"px"; })
       .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
       .style("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
       .text(function(d) { return d.key; })

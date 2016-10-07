@@ -86,63 +86,64 @@
     }
 
 
-.navbar .navbar-nav > .active > a, 
- .navbar .navbar-nav > .active > a:hover, 
- .navbar .navbar-nav > .active > a:focus {
-      color: #FFF;
-      border-width: 0px;
-    -webkit-box-shadow: 0px 0px;
-    box-shadow: 0px 0px;
-    background-color: rgba(0,0,0,0.0);
-    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
-    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-}
- }
+      .navbar .navbar-nav > .active > a, 
+       .navbar .navbar-nav > .active > a:hover, 
+       .navbar .navbar-nav > .active > a:focus {
+            color: #FFF;
+            border-width: 0px;
+          -webkit-box-shadow: 0px 0px;
+          box-shadow: 0px 0px;
+          background-color: rgba(0,0,0,0.0);
+          background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+          background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+          background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+      }
 
- .node {
-  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #fff;
-}
+       .node {
+        font-weight: 300;
+        fill: #333;
+        opacity: 0.7;
+        text-decoration: none;
+      }
 
-.node:hover {
-  fill: #000;
-}
+      .node:hover {
+        opacity: 1;      }
 
-.link {
-  stroke: #333;
-  stroke-opacity: .4;
-  fill: none;
-  pointer-events: none;
-}
+      .link {
+        stroke: #333;
+        stroke-opacity: .4;
+        fill: none;
+        pointer-events: none;
+      }
 
-.node:hover,
-.node--source,
-.node--target {
-  font-weight: 700;
-}
+      .node:hover,
+      .node--source,
+      .node--target {
+        font-weight: 700;
+        opacity: 1; 
+      }
 
-.node--source {
-  fill: #3498db;
-}
+      .node--source {
+        fill: #3498db;
+      }
 
-.node--target {
-  fill: #f1c40f;
-}
+      .node--target {
+        fill: #f1c40f;
+      }
 
-.link--source,
-.link--target {
-  stroke-opacity: 1;
-  stroke-width: 2px;
-}
+      .link--source,
+      .link--target {
+        stroke-opacity: 1;
+        stroke-width: 2px;
+      }
 
-.link--source {
-  stroke: #f1c40f;
-}
+      .link--source {
+        stroke: #f1c40f;
+      }
 
-.link--target {
-  stroke: #3498db;
-}
+      .link--target {
+        stroke: #3498db;
+      }
 
 
     </style
