@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="theme-color" content="#EEEEEE" />
     <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <title>Valentin Liévin's personal website</title>
+    <title>Valentin</title>
 
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -49,6 +49,7 @@
         background-color: #EEE ;
         font-family: 'Space Mono';
         color: #555;
+        text-align: justify;
       }
       .margin-top-bottom{
         margin-top-top: 10px;
@@ -59,6 +60,14 @@
         background-color: #EEE;
         color: #333;
 
+      }
+
+      .card-padding{
+        padding: 20px;
+      }
+
+      h1{
+        font-size: 42px;
       }
       .brutalist_header {
         text-align: left;
@@ -166,39 +175,46 @@
 
     <div class = "container-fluid brutalist_header" id = "about" >
       <div class = "container-fluid margin-top-bottom">
-        <h1>VALENTIN LIEVIN</h1>
+        <h1>Valentin Liévin</h1>
+        <p>Engineering student<p>
       </div>
     </div>
 
   <nav class="navbar navbar-inverse hidden-sm" data-spy="affix" data-offset-top="500" style="background-color: #333; border-radius:0; border:none; opacity:1; border-shadow:0;
   background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);">
-    <ul class="nav navbar-nav">
-      <!-- <li class="active"><a href="#">Basic Topnav</a></li> -->
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <!--<li><a href="#creations">Creations</a></li>-->
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <!-- <li class="active"><a href="#">Basic Topnav</a></li> -->
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <!--<li><a href="#creations">Creations</a></li>-->
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
 
     
     <div class = "container-fluid">
       <div  class = "container-fluid margin-top-bottom" style="margin-top: 25px;" >
+
         <h2>About me</h2>
-        <p>I'm an engineering student following a degree in Data Interaction and student programmer at EasyTranslate (Copenhagen), I create new systems for the translation industry using machine learning. I'm interested in technology, science and innovation, particularly concerning AI and space exploration. I like photography, traveling, photography and cats.</p>
+        <div >
+          <p>I'm an engineering student following a degree in Data Interaction and junior engineer at EasyTranslate (Copenhagen), I create new systems for the translation industry using machine learning. I'm interested in technology, science and innovation, particularly concerning AI and space exploration. I like photography, traveling, photography and cats.</p>
 
-        <!--<p>I am currently a Dual degree in Data Interaction between DTU (Copenhaguen, Denmark) and KAIST (Daejeon 대전시, South Korea). Previously, thanks to the TIME network (Top Industrial Managers for Europe), I have studied 2 years at the Ecole Centrale de Nantes after I have succeed in a nationwide selective exam with numerus claususis called Concours Centrale-Supelec.</p>
+          <!--<p>I am currently a Dual degree in Data Interaction between DTU (Copenhaguen, Denmark) and KAIST (Daejeon 대전시, South Korea). Previously, thanks to the TIME network (Top Industrial Managers for Europe), I have studied 2 years at the Ecole Centrale de Nantes after I have succeed in a nationwide selective exam with numerus claususis called Concours Centrale-Supelec.</p>
 
-        <p>I am currently working as a student programmer with DTU Compute on the behalf of EasyTranslate. I am currently working on improving machine translation using additional information provided by the context.</p>
+          <p>I am currently working as a student programmer with DTU Compute on the behalf of EasyTranslate. I am currently working on improving machine translation using additional information provided by the context.</p>
 
-        <p>Besides my studies, I like new technologies, AI, drawing, photgraphy, mountain sports, running, cats and more generally, the internet culture. </p>-->
+          <p>Besides my studies, I like new technologies, AI, drawing, photgraphy, mountain sports, running, cats and more generally, the internet culture. </p>-->
+        </div>
       </div>
       <div id="projects" class = "container-fluid margin-top-bottom spacedSection">
         <h2>Projects</h2>
         <div class="row">
-          <div class="col-md-3 margin-top-bottom">
+          <div class="col-md-3 margin-top-bottom card-padding">
             <div class="projectContainer">
               <div class="w3-container">
                 <h3>AR Pool</h3>
@@ -212,7 +228,7 @@
               <p><a href="https://github.com/CheatingBilliard/ProjetRVBillard"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
-          <div class="col-md-3 margin-top-bottom">
+          <div class="col-md-3 margin-top-bottom card-padding">
             <div class="projectContainer">
               <div class="w3-container">
                 <h3>HeavyM</h3>
@@ -227,7 +243,7 @@
               <p><a href="https://heavym.net/en/"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
-          <div class="col-md-3 margin-top-bottom">
+          <div class="col-md-3 margin-top-bottom card-padding">
             <div class="projectContainer">
               <div class="w3-container">
                 <h3>DeepReader</h3>
@@ -242,7 +258,7 @@
               <p><a href="https://deepreader.herokuapp.com/"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
-          <div class="col-md-3 margin-top-bottom">
+          <div class="col-md-3 margin-top-bottom card-padding">
             <div class="projectContainer">
               <div class="w3-container">
                 <h3>TriangulateJS</h3>
@@ -258,7 +274,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 margin-top-bottom">
+          <div class="col-md-3 margin-top-bottom card-padding">
             <div class="projectContainer">
               <div class="w3-container">
                 <h3>Improving Shelter Animal Outcomes</h3>
@@ -273,7 +289,7 @@
               <p><a href="https://github.com/vlievin/Kaggle-Shelter-Animal-Outcomes"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
-          <div class="col-md-3 margin-top-bottom">
+          <div class="col-md-3 margin-top-bottom card-padding">
             <div class="projectContainer">
               <div class="w3-container">
                 <h3>Companion Light</h3>
@@ -287,7 +303,7 @@
               <p><a href="https://github.com/vlievin/Companion-Light"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
-          <div class="col-md-3 margin-top-bottom">
+          <div class="col-md-3 margin-top-bottom card-padding">
             <div class="projectContainer">
               <div class="w3-container">
                 <h3>IntervalPro</h3>
