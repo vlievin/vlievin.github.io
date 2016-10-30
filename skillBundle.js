@@ -1,6 +1,8 @@
 data = [
 {"name":"Classes prepa.mathematics","size":1,"imports":[]},
 {"name":"Classes prepa.physics","size":1,"imports":["Classes prepa.mathematics"]},
+
+
 {"name":"ECN.economy","size":1,"imports":["ECN.Engineering mathematics", "Classes prepa.mathematics"]},
 {"name":"ECN.Engineering mathematics","size":1,"imports":["Classes prepa.mathematics"]},
 {"name":"ECN.Continuum physics","size":1,"imports":["Classes prepa.mathematics","ECN.Engineering mathematics","Classes prepa.physics"]},
@@ -11,7 +13,7 @@ data = [
 {"name":"ECN.Augmented Reality","size":1,"imports":["ECN.C++","ECN.OpenGL"]},
 {"name":"ECN.Scientific Visualization","size":1,"imports":["ECN.C++","ECN.OpenGL", "Classes prepa.mathematics"]},
 {"name":"ECN.Information Systems","size":1,"imports":[]},
-{"name":"ECN.Algorithms and programming","size":1,"imports":["ECN.C++"]},
+{"name":"ECN.Algorithms and programming","size":1,"imports":[]},
 
 
 {"name":"DTU.python","size":1,"imports":["ECN.C++", "ECN.Algorithms and programming"]},
@@ -94,9 +96,11 @@ function drawBundleSkills(divID){
     .enter().append("text")
       .attr("class", "node")
       .attr("dy", ".31em")
-      .style("font-size", function(d) { d.size * 12 +"px"; })
+      .style("font-size", function(d) { d.size * 20 +"px"; })
+      .attr("text-color" , "red")
       .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
       .style("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+      .style("fill", function(d){  return nameToColor(d.name); })
       .text(function(d) { return d.key; })
       .on("mouseover", mouseovered)
       .on("mouseout", mouseouted);

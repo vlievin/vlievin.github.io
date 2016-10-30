@@ -102,7 +102,7 @@
        .node {
         font-weight: 300;
         fill: #333;
-        opacity: 0.7;
+        opacity: 0.8;
         text-decoration: none;
       }
 
@@ -138,11 +138,25 @@
       }
 
       .link--source {
-        stroke: #f1c40f;
+        stroke: #333;
       }
 
       .link--target {
-        stroke: #3498db;
+        stroke: #333;
+      }
+
+      .axis path{
+        stroke:none;
+        fill:none;
+      }
+      .axis line {
+          fill: none;
+          stroke: black;
+          shape-rendering: crispEdges;
+      }
+
+      .axis text {
+          font-size: 12px;
       }
 
 
@@ -152,8 +166,7 @@
 
     <div class = "container-fluid brutalist_header" id = "about" >
       <div class = "container-fluid margin-top-bottom">
-        <h1>Valentin Liévin</h1>
-        <p>Enginering student in Data Interaction and student programmer in Knowledge-based systems at EasyTranslate. Likes AI, mountains and cats. </p>
+        <h1>VALENTIN LIEVIN</h1>
       </div>
     </div>
 
@@ -163,7 +176,7 @@
       <!-- <li class="active"><a href="#">Basic Topnav</a></li> -->
       <li><a href="#about">About Me</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#creations">Creations</a></li>
+      <!--<li><a href="#creations">Creations</a></li>-->
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -174,7 +187,7 @@
     <div class = "container-fluid">
       <div  class = "container-fluid margin-top-bottom" style="margin-top: 25px;" >
         <h2>About me</h2>
-        <p>I'm an enginering student in Digital Media Engineering preparing engineering degrees between the Ecole Centrale de Nantes (Genral Engineering), DTU (Digital Media Engineering) and KAIST (Data Interaction). I like to do things by myself and create new stuff. I think that AI and IoT can dramatically change people's life, in the good way, that's why I want to drive things forward.</p>
+        <p>I'm an enginering student following a degree in Data Interaction and student programmer at EasyTranslate (Copenhaguen), I create new systems using machine learning for the translation industry. I'm interested in technology, science and innovation, particularly concerning AI and space exploration. I like photography, traveling, photography and cats.</p>
 
         <!--<p>I am currently a Dual degree in Data Interaction between DTU (Copenhaguen, Denmark) and KAIST (Daejeon 대전시, South Korea). Previously, thanks to the TIME network (Top Industrial Managers for Europe), I have studied 2 years at the Ecole Centrale de Nantes after I have succeed in a nationwide selective exam with numerus claususis called Concours Centrale-Supelec.</p>
 
@@ -182,7 +195,6 @@
 
         <p>Besides my studies, I like new technologies, AI, drawing, photgraphy, mountain sports, running, cats and more generally, the internet culture. </p>-->
       </div>
-      <div style="height: 800px;; width:100%;text-align:center;" id="skillBundle"></div>
       <div id="projects" class = "container-fluid margin-top-bottom spacedSection">
         <h2>Projects</h2>
         <div class="row">
@@ -197,7 +209,7 @@
               <div class="w3-container margin-top-bottom">
                 <p>One of my first computer sciences project. The project aims to help the pool players using augmented reality.</p>
               </div>
-              <a href="https://github.com/CheatingBilliard/ProjetRVBillard"><button  class="btn-link">+ See More</button></a>
+              <p><a href="https://github.com/CheatingBilliard/ProjetRVBillard"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
           <div class="col-md-3 margin-top-bottom">
@@ -212,7 +224,7 @@
                 <p> HeavyM is an intuitive projection mapping software, it is currently running in beta version. It allows the creation and projection of visual animations with great facility, in order to be projected on real surfaces with a projector. </p>
                 <p>As an intern, my role was to developp from scratch the new version of the software announced during the Kickstarter campagne.</p>
               </div>
-              <a href="https://heavym.net/en/"><button  class="btn-link">+ See More</button></a>
+              <p><a href="https://heavym.net/en/"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
           <div class="col-md-3 margin-top-bottom">
@@ -227,7 +239,7 @@
                 <p>This project involves natural language processing and network science.Its development is part of our MSc Digital Media Engineering at DTU and is through collaboration with EasyTranslate.</p>
                 <p>The project aims to provide a tool to understand a text without having to read it. We make it possible to explore a corpus of texts and display the relations between them.</p>
               </div>
-              <a href="https://deepreader.herokuapp.com/"><button  class="btn-link">+ See More</button></a>
+              <p><a href="https://deepreader.herokuapp.com/"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
           <div class="col-md-3 margin-top-bottom">
@@ -241,7 +253,7 @@
               <div class="w3-container margin-top-bottom">
                 <p>A short personal project made during holidays. This app generates automatically a polygon art from any image using Delaunay triangulation and contour detection. The app was originally coded with Python, but it is now running with Javascript.</p>
               </div>
-              <a href="http://vlievin.github.io/triangulateJS/"><button  class="btn-link">+ See More</button></a>
+              <p><a href="http://vlievin.github.io/triangulateJS/"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
         </div>
@@ -258,7 +270,7 @@
                 <p>My first Kaggle competiton (a data mining competition).</p>
                 <p>Given a data set containing information about hosted animals (age, sex, color, breed, etc..) and their outcomes (Adopted, euthanasied, return to owner, etc..), the goal was to predict the outcomes of new animals given the information about animals.</p>
               </div>
-              <a href="https://github.com/vlievin/Kaggle-Shelter-Animal-Outcomes"><button  class="btn-link">+ See More</button></a>
+              <p><a href="https://github.com/vlievin/Kaggle-Shelter-Animal-Outcomes"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
           <div class="col-md-3 margin-top-bottom">
@@ -272,7 +284,7 @@
               <div class="w3-container margin-top-bottom">
                 <p>A project that aims to build a context aware light using RGB LEDs, a BLE arduino module and an Android app. The light adapt itself depending on the position of the user.</p>
               </div>
-              <a href="https://github.com/vlievin/Companion-Light"><button  class="btn-link">+ See More</button></a>
+              <p><a href="https://github.com/vlievin/Companion-Light"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
           <div class="col-md-3 margin-top-bottom">
@@ -286,21 +298,23 @@
               <div class="w3-container margin-top-bottom">
                 <p>My frist Android app. Track your interval training using GPS. Save and manage sessions. Share activity on Facebook.</p>
               </div>
-              <a href="https://github.com/vlievin/IntervalPro"><button  class="btn-link">+ See More</button></a>
+              <p><a href="https://github.com/vlievin/IntervalPro"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
         </div>
       </div>
-      <div id="creations" class = "container-fluid margin-top-bottom spacedSection">
+      <!--<div id="creations" class = "container-fluid margin-top-bottom spacedSection">
         <h2>Creations</h2>
         <div id="Creations">
         <p>[Work in progress] (Blender, photographies, drawings, instagram)</p>
         </div>
-      </div>
+      </div>-->
       <div id="education" class = "container-fluid margin-top-bottom spacedSection">
         <h2>Education</h2>
         <div id="education-viz">
-        <p>[Work in progress] (Centrale Nantes, DTU, KAIST)</p>
+          <p>[Work in progress] (Centrale Nantes, DTU, KAIST)</p>
+          <div style="height: 200px; width:100%;text-align:center;" id="educationTimeline"></div>
+          <div style="height: 800px;; width:100%;text-align:center;" id="skillBundle"></div>
         </div>
       </div>
       <div id="contact" class = "container-fluid margin-top-bottom spacedSection">
@@ -319,14 +333,52 @@
 
   <script src="https://d3js.org/d3.v3.min.js"></script>
   <script type="text/javascript" src="skillBundle.js"></script>
+  <script type="text/javascript" src="educationTimeline.js"></script>
 
 <script>
+var col1 = "#FFBC67";
+var col2 = "#DA727E";
+var col3 = "#AC6C82";
+var col4 = "#685C79";
+var col5 = "#455C7B";
+
+function nameToColor(name){
+  var parent = name.split(".")[0]
+  switch (parent){
+    case "Classes prepa":
+      return col2
+      break;
+    case "ECN":
+      return col3
+      break;
+    case "DTU":
+      return col4
+      break;
+    case "KAIST":
+      return col5
+      break;
+    case "Perso":
+      return col1
+      break;
+  }
+
+};
+
+
 $( document ).ready(function() {
     drawBundleSkills("skillBundle");
 });
 $( window ).resize(function() {
   d3.select("svg").remove();
   drawBundleSkills("skillBundle");
+});
+
+$( document ).ready(function() {
+    drawEducationTimeline("educationTimeline");
+});
+$( window ).resize(function() {
+  d3.select("svg").remove();
+  drawEducationTimeline("educationTimeline");
 });
 </script>
 
