@@ -65,7 +65,7 @@ function drawBundleSkills(divID){
 
   var line = d3.svg.line.radial()
       .interpolate("bundle")
-      .tension(.95)
+      .tension(.75)
       .radius(function(d) { return d.y; })
       .angle(function(d) { return d.x / 180 * Math.PI; });
 
