@@ -125,7 +125,7 @@
 
       .link {
         stroke: #333;
-        stroke-opacity: .1;
+        stroke-opacity: .4;
         fill: none;
         pointer-events: none;
       }
@@ -147,16 +147,16 @@
 
       .link--source,
       .link--target {
-        stroke-opacity: 0.8;
+        stroke-opacity: 1;
         stroke-width: 2px;
       }
 
       .link--source {
-        stroke: #555;
+        stroke: #333;
       }
 
       .link--target {
-        stroke: #555;
+        stroke: #333;
       }
 
       .axis path{
@@ -179,16 +179,16 @@
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <div class = "container-fluid brutalist_header" id = "about" >
-      <div class = "container margin-top-bottom">
+      <div class = "container-fluid margin-top-bottom">
         <h1>Valentin Liévin</h1>
-        <!--<p>&emsp;&emsp;Engineering student<p>-->
+        <p>Engineering student<p>
       </div>
     </div>
 
   <nav class="navbar navbar-inverse hidden-sm" data-spy="affix" data-offset-top="500" style="background-color: #333; border-radius:0; border:none; opacity:1; border-shadow:0;
   background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);">
 
-    <div class="container">
+    <div class="container-fluid">
       <ul class="nav navbar-nav">
         <!-- <li class="active"><a href="#">Basic Topnav</a></li> -->
         <li><a href="#about">About Me</a></li>
@@ -202,32 +202,25 @@
 
 
     
-    <div class = "container">
-
-      <div  class = "container-fluid margin-top-bottom" style="margin-top: 25px;" >
-
-        <p>[Work in progress]</p>
-
-        <h2>About me</h2>
-        <div>
-          <p>Hi friend, I'm an engineering student following a degree in Data Interaction and junior engineer at EasyTranslate (Copenhagen), I create new systems for the translation industry using machine learning. I'm interested in technology, science and innovation, particularly concerning AI. I like photography, I travel as much as I can and I enjoy mountains through a variety of sports.</p>
-
-          <!--<p>I am currently a Dual degree in Data Interaction between DTU (Copenhaguen, Denmark) and KAIST (Daejeon 대전시, South Korea). Previously, thanks to the TIME network (Top Industrial Managers for Europe), I have studied 2 years at the Ecole Centrale de Nantes after I have succeed in a nationwide selective exam with numerus claususis called Concours Centrale-Supelec.</p>
-
-          <p>I am currently working as a student programmer with DTU Compute on the behalf of EasyTranslate. I am currently working on improving machine translation using additional information provided by the context.</p>
-
-          <p>Besides my studies, I like new technologies, AI, drawing, photgraphy, mountain sports, running, cats and more generally, the internet culture. </p>-->
-        </div>
-      </div>
+    <div class = "container-fluid">
       <div id="projects" class = "container-fluid margin-top-bottom spacedSection">
         <h2>Projects</h2>
-        <div class="row"> 
-          <div class="container-fluid">
-            <p>Most of my projects are available on my <a href="https://github.com/vlievin">Github</a>. I've been contributing to projects related to Data Science, Android development, Software development and Augmented Reality as well as simple web apps and more recently some Deep Learning projects. Here are some of my favorite projects</p>
-          </div>
-        </div>
         <div class="row">
-          <div class="col-md-4 margin-top-bottom card-padding">
+          <div class="col-md-3 margin-top-bottom card-padding">
+            <div class="projectContainer">
+              <div class="w3-container">
+                <h3>AR Pool</h3>
+              </div>
+              <div class="w3-container">
+                <i>October 2014 - January 2015</i>
+              </div>
+              <div class="w3-container margin-top-bottom">
+                <p>One of my first computer sciences project. The project aims to help the pool players using augmented reality.</p>
+              </div>
+              <p><a href="https://github.com/CheatingBilliard/ProjetRVBillard"><button  class="btn-link">+ See More</button></a></p>
+            </div>
+          </div>
+          <div class="col-md-3 margin-top-bottom card-padding">
             <div class="projectContainer">
               <div class="w3-container">
                 <h3>HeavyM</h3>
@@ -236,13 +229,13 @@
                 <i>March 2015 - August 2015</i>
               </div>
               <div class="w3-container margin-top-bottom">
-                <p> HeavyM is an intuitive software which aims to bring projection mapping to the crowd. It allows the creation and projection of visual animations with great facility, in order to be projected on real surfaces with a projector. </p>
+                <p> HeavyM is an intuitive projection mapping software, it is currently running in beta version. It allows the creation and projection of visual animations with great facility, in order to be projected on real surfaces with a projector. </p>
                 <p>As an intern, my role was to developp from scratch the new version of the software announced during the Kickstarter campagne.</p>
               </div>
               <p><a href="https://heavym.net/en/"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
-          <div class="col-md-4 margin-top-bottom card-padding">
+          <div class="col-md-3 margin-top-bottom card-padding">
             <div class="projectContainer">
               <div class="w3-container">
                 <h3>DeepReader</h3>
@@ -251,13 +244,44 @@
                 <i>October 2015 - December 2015</i>
               </div>
               <div class="w3-container margin-top-bottom">
-                <p>This project involves natural language processing and network science. Its development is part of our MSc Digital Media Engineering at DTU and is through collaboration with EasyTranslate.</p>
+                <p>This project involves natural language processing and network science.Its development is part of our MSc Digital Media Engineering at DTU and is through collaboration with EasyTranslate.</p>
                 <p>The project aims to provide a tool to understand a text without having to read it. We make it possible to explore a corpus of texts and display the relations between them.</p>
               </div>
               <p><a href="https://deepreader.herokuapp.com/"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
-          <div class="col-md-4 margin-top-bottom card-padding">
+          <div class="col-md-3 margin-top-bottom card-padding">
+            <div class="projectContainer">
+              <div class="w3-container">
+                <h3>TriangulateJS</h3>
+              </div>
+              <div class="w3-container">
+                <i>March 2016</i>
+              </div>
+              <div class="w3-container margin-top-bottom">
+                <p>A short personal project made during holidays. This app generates automatically a polygon art from any image using Delaunay triangulation and contour detection. The app was originally coded with Python, but it is now running with Javascript.</p>
+              </div>
+              <p><a href="http://vlievin.github.io/triangulateJS/"><button  class="btn-link">+ See More</button></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 margin-top-bottom card-padding">
+            <div class="projectContainer">
+              <div class="w3-container">
+                <h3>Improving Shelter Animal Outcomes</h3>
+              </div>
+              <div class="w3-container">
+                <i>Mai 2016 - June 2016</i>
+              </div>
+              <div class="w3-container margin-top-bottom">
+                <p>My first Kaggle competiton (a data mining competition).</p>
+                <p>Given a data set containing information about hosted animals (age, sex, color, breed, etc..) and their outcomes (Adopted, euthanasied, return to owner, etc..), the goal was to predict the outcomes of new animals given the information about animals.</p>
+              </div>
+              <p><a href="https://github.com/vlievin/Kaggle-Shelter-Animal-Outcomes"><button  class="btn-link">+ See More</button></a></p>
+            </div>
+          </div>
+          <div class="col-md-3 margin-top-bottom card-padding">
             <div class="projectContainer">
               <div class="w3-container">
                 <h3>Companion Light</h3>
@@ -271,86 +295,24 @@
               <p><a href="https://github.com/vlievin/Companion-Light"><button  class="btn-link">+ See More</button></a></p>
             </div>
           </div>
-        </div>
-      </div>
-      
-      <!--<div id="creations" class = "container-fluid margin-top-bottom spacedSection">
-        <h2>Creations</h2>
-        <div id="Creations">
-        </div>
-      </div>-->
-      <div id="education" class = "container-fluid margin-top-bottom spacedSection">
-        <h2>Education</h2>
-        <div id="education-viz">
-          <div style="height: 200px; width:100%;text-align:center;" id="educationTimeline"></div>
-          <div style="height: 800px;; width:100%;text-align:center;" id="skillBundle"></div>
-        </div>
-      </div>
-      <div id="contact" class = "container-fluid margin-top-bottom spacedSection">
-        <h2>Contact</h2>
-        <div style="width:100%; height:500px;">
-        <p>[Work in progress]  </p>
-         <div>
-          <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-<script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/valentinlievin" data-format="inline"></script>
-        </div>
+          <div class="col-md-3 margin-top-bottom card-padding">
+            <div class="projectContainer">
+              <div class="w3-container">
+                <h3>IntervalPro</h3>
+              </div>
+              <div class="w3-container">
+                <i>April 2016</i>
+              </div>
+              <div class="w3-container margin-top-bottom">
+                <p>My frist Android app. Track your interval training using GPS. Save and manage sessions. Share activity on Facebook.</p>
+              </div>
+              <p><a href="https://github.com/vlievin/IntervalPro"><button  class="btn-link">+ See More</button></a></p>
+            </div>
+          </div>
         </div>
       </div>
 
     </div>
   </body>
-
-  <script src="https://d3js.org/d3.v3.min.js"></script>
-  <script type="text/javascript" src="skillBundle.js"></script>
-  <script type="text/javascript" src="educationTimeline.js"></script>
-
-<script>
-var col1 = "#FFBC67";
-var col2 = "#DA727E";
-var col3 = "#AC6C82";
-var col4 = "#685C79";
-var col5 = "#455C7B";
-
-function nameToColor(name){
-  var parent = name.split(".")[0]
-  switch (parent){
-    case "Classes prepa":
-      return col2
-      break;
-    case "ECN":
-      return col3
-      break;
-    case "DTU":
-      return col4
-      break;
-    case "KAIST":
-      return col5
-      break;
-    case "Perso":
-      return col1
-      break;
-  }
-
-};
-
-
-$( document ).ready(function() {
-    drawBundleSkills("skillBundle");
-});
-$( window ).resize(function() {
-  d3.select("svg").remove();
-  drawBundleSkills("skillBundle");
-});
-
-$( document ).ready(function() {
-    drawEducationTimeline("educationTimeline");
-});
-$( window ).resize(function() {
-  d3.select("svg").remove();
-  drawEducationTimeline("educationTimeline");
-});
-</script>
-
-
 
 </html>
