@@ -19,308 +19,106 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <!-- W3 schools style sheet-->
         <!--fonts-->
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Lato:light">
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Slabo+27px" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans:200,400" rel="stylesheet">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <style>
 
-      .box-shadow--2dp {
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+      * {
+        border-radius: 0 !important;
       }
-      .box-shadow--3dp {
-        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12)
+      .container{
+        background-color: none;
       }
-      .box-shadow--4dp {
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+      .jumbotron{
+        text-align: left;
+        background:none;
       }
-      .box-shadow--6dp {
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+      .border_top
+      {
+        border-top: 2px solid black;
+        padding-top:20px;
       }
-      .box-shadow--8dp {
-        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
+      .card{
+        padding:12px;
+        padding-bottom: 0px;
       }
-      .box-shadow--16dp {
-        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+      .row{
+        width: 100%;
       }
-      body {
-        background-color: #EEE ;
-        font-family: 'Work Sans', sans-serif;
-        color: #555;
-        text-align: justify;
+      .spacer_L{
+        height:300px;"
+      }
+      .spacer{
+        height:100px;"
       }
       h1{
-        font-family: 'Work Sans',sans-serif;
-        font-size: 64px;
-        font-weight: 200;
+        font-family: 'Anton', sans-serif;
+        font-size: 4em;
       }
-      h2,h3{
-          font-family: Space Mono;
+      p{
+        font-family: 'Slabo 27px', serif;
+        font-size: 1.0em;
       }
-      .margin-top-bottom{
-        margin-top-top: 10px;
-        margin-bottom: 10px;
-      }
-
-      .car_header{
-        background-color: #EEE;
-        color: #333;
-
+      .col-md-2{
+        text-align: left;
+        background-color: none;
       }
 
-      .card-padding{
-        padding: 20px;
-      }
-
-      .brutalist_header {
-        /*text-align: left;
-        height: 500px;
-        padding-top: 300px;*/
-        background-color: #333;
-        color: #EEE;
-      }
-      .spacedSection{
-        margin-top: 50px;
-      }
-
-      .affix {
-      top: 0;
-      width: 100%;
-      z-index: 999;
-    }
-    .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-  }
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
-
-       .node {
-        font-weight: 300;
-        fill: #333;
-        opacity: 0.8;
+      .fa {
+        padding: 1px;
+        font-size: 2em;
+        width: 50px;
+        text-align: left;
         text-decoration: none;
-      }
-
-      .node:hover {
-        opacity: 1;      }
-
-      .link {
-        stroke: #333;
-        stroke-opacity: .1;
-        fill: none;
-        pointer-events: none;
-      }
-
-      .node:hover,
-      .node--source,
-      .node--target {
-        font-weight: 700;
-        opacity: 1; 
-      }
-
-      .node--source {
-        fill: #3498db;
-      }
-
-      .node--target {
-        fill: #f1c40f;
-      }
-
-      .link--source,
-      .link--target {
-        stroke-opacity: 0.8;
-        stroke-width: 2px;
-      }
-
-      .link--source {
-        stroke: #555;
-      }
-
-      .link--target {
-        stroke: #555;
-      }
-
-      .axis path{
-        stroke:none;
-        fill:none;
-      }
-      .axis line {
-          fill: none;
-          stroke: black;
-          shape-rendering: crispEdges;
-      }
-
-      .axis text {
-          font-size: 12px;
-      }
-
-      .footer{
-        height:80px;
-        background-color: #333;
-        color: #EEE;
-
-      }
-
+        color:black;
+        /*border:2px solid black;*/
+    }
+    .fill_black{
+      background-color: #333
+    }
+      
 
     </style>
   </head>
   <body>
-
-<!--  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Me</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">WHO</a></li>
-        <li><a href="#">WHAT</a></li>
-        <li><a href="#">WHERE</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>-->
-
-    <div class = "container-fluid jumbotron brutalist_header text-center" id = "about" >
-      <div class = "container margin-top-bottom">
-        <img src="img/me.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Me" width="200" height="200">
-        <h1>Valentin Liévin</h1>
-        <!--<p>&emsp;&emsp;Engineering student<p>-->
-      </div>
-    </div>
-
-  
-
-
     
     <div class = "container">
-
-      <div  class = "container-fluid margin-top-bottom" style="margin-top: 25px;" >
-
-        <p>[Work in progress]</p>
-
-        <h2>About me</h2>
-        <div>
-          <p>Hi friend, I'm an engineering student following a degree in Computer Science with a focus on Data Science. I'm also junior Developer and Data Analyst at EasyTranslate (Copenhagen), I create new systems for the translation industry using machine learning. 
-          I'm interested in new technologies, science and innovation. I want to make things move forward, especially in field of AI. I like photography, I travel as much as I can and I enjoy mountain through a variety of sports.</p>
-
-          <!--<p>I am currently a Dual degree in Data Interaction between DTU (Copenhaguen, Denmark) and KAIST (Daejeon 대전시, South Korea). Previously, thanks to the TIME network (Top Industrial Managers for Europe), I have studied 2 years at the Ecole Centrale de Nantes after I have succeed in a nationwide selective exam with numerus claususis called Concours Centrale-Supelec.</p>
-
-          <p>I am currently working as a student programmer with DTU Compute on the behalf of EasyTranslate. I am currently working on improving machine translation using additional information provided by the context.</p>
-
-          <p>Besides my studies, I like new technologies, AI, drawing, photgraphy, mountain sports, running, cats and more generally, the internet culture. </p>-->
+      <div class="spacer_L">
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card name_header">
+            <h1>Valentin Liévin</h1> 
+          </div>
+          <!-- <div class="spacer">
+          </div> -->
+          <div class="card">
+              <div class="border_top">
+                <p>Hi friend, I'm an engineering student following a degree in Computer Science with a focus on AI and Deep Learning. I'm also junior Developer at EasyTranslate (Copenhagen), I create new systems for the translation industry using machine learning. I'm interested in new technologies, science and innovation. I want to make things move forward, especially in field of AI.</p>
+              </div>
+          </div>
+          <!-- <div class="spacer">
+          </div> -->
+        </div>
+        <div class="col-md-6">
         </div>
       </div>
-      <div id="projects" class = "container-fluid margin-top-bottom spacedSection">
-        <h2>Projects</h2>
-        <div class="row"> 
-          <div class="container-fluid">
-            <p>Most of my projects are available on my <a href="https://github.com/vlievin">Github</a>. I've been contributing to projects related to Data Science, Android development, Software development and Augmented Reality as well as simple web apps. Recently, I've been focusing on projects involving Deep Learning and Reinforcement Learning. Here are some of my favorite projects:</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4  card-padding ">
-            <div class="projectContainer">
-              <div class="w3-container">
-                <h3>HeavyM</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+             <div>
+                  <a href="https://www.linkedin.com/in/valentinlievin/" class="fa fa-linkedin"></a>
+                  <a href="https://github.com/vlievin" class="fa fa-github"></a>
+                  <a href="https://www.instagram.com/valentin.lievin/" class="fa fa-instagram"></a>
               </div>
-              <div class="w3-container">
-                <i>March 2015 - August 2015</i>
-              </div>
-              <div class="w3-container margin-top-bottom">
-                <p>HeavyM is a creative software developed by Digital Essence, a young startup based in Paris.</p>
-                <p> HeavyM is an intuitive software which aims to bring projection mapping to the crowd. It allows the creation and projection of visual animations with great facility, in order to be projected on real surfaces with a projector. </p>
-                <p>As an intern, my role was to developp from scratch the new version of the software announced during the Kickstarter campagne.</p>
-              </div>
-              <p><a href="https://heavym.net/en/"><button  class="btn-link">+ See More</button></a></p>
             </div>
-          </div>
-          <div class="col-md-4 card-padding">
-            <div class="projectContainer">
-              <div class="w3-container">
-                <h3>DeepReader</h3>
-              </div>
-              <div class="w3-container">
-                <i>October 2015 - December 2015</i>
-              </div>
-              <div class="w3-container margin-top-bottom">
-                <p>This project involves natural language processing and network science. Its development is part of our MSc Digital Media Engineering at DTU and is through collaboration with EasyTranslate.</p>
-                <p>The project aims to provide a tool to understand a text without having to read it. We make it possible to explore a corpus of texts and display the relations between them.</p>
-                <p>Further improvements have been made to automatize the translation workflow at EasyTranslate.</p>
-              </div>
-              <p><a href="https://deepreader.herokuapp.com/"><button  class="btn-link">+ See More</button></a></p>
-            </div>
-          </div>
-          <div class="col-md-4 card-padding">
-            <div class="projectContainer">
-              <div class="w3-container">
-                <h3>Companion Light</h3>
-              </div>
-              <div class="w3-container">
-                <i>Mai 2016 - June 2016</i>
-              </div>
-              <div class="w3-container margin-top-bottom">
-                <p>A project that aims to build a context aware light using RGB LEDs, a BLE arduino module and an Android app. The light adapt itself depending on the position of the user.</p>
-              </div>
-              <p><a href="https://github.com/vlievin/Companion-Light"><button  class="btn-link">+ See More</button></a></p>
-            </div>
-          </div>
         </div>
-      </div>
-      
-      <div id="creations" class = "container-fluid margin-top-bottom spacedSection">
-        <h2>Photography</h2>
-        <div id="Creations">
-           <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-           <div class="col-md-4 card-padding">
-            <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:41.3425925926% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BNWxE6IBnes/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Une photo publiée par Valentin Liévin (@valentin.lievin)</a> le <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-11-28T13:36:30+00:00">28 Nov. 2016 à 5h36 PST</time></p></div></blockquote>
-          </div>
-          <div class="col-md-4 card-padding">
-            <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BNoTdl2BnAc/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Une photo publiée par Valentin Liévin (@valentin.lievin)</a> le <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-12-05T09:04:03+00:00">5 Déc. 2016 à 1h04 PST</time></p></div></blockquote>
-          </div>
-          <div class="col-md-4 card-padding">
-            <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:35.7407407407% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BCI8R3yPMVf/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Une photo publiée par Valentin Liévin (@valentin.lievin)</a> le <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-02-23T18:59:41+00:00">23 Févr. 2016 à 10h59 PST</time></p></div></blockquote>
-          </div>
-        </div>
-      </div>
-      <div id="education" class = "container-fluid margin-top-bottom spacedSection">
-        <h2>Education</h2>
-        <div id="education-viz">
-          <div style="height: 200px; width:100%;text-align:center;" id="educationTimeline"></div>
-          <div style="height: 800px;; width:100%;text-align:center;" id="skillBundle"></div>
-        </div>
-      </div>
-      <div id="contact" class = "container-fluid margin-top-bottom spacedSection">
-        <h2>Contact</h2>
-
-
-
-      </div>
-
     </div>
-
-    <div class="text-center" style="margin:20px 0px 20px 0px;padding:0;">
-          <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-          <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/valentinlievin" data-format="inline"></script>
-        </div>
       
-
-    <div class= "container-fluid footer" >
-    </div>
 
 
   </body>
@@ -336,56 +134,8 @@
 
 </script>
 
-  <script src="https://d3js.org/d3.v3.min.js"></script>
-  <script type="text/javascript" src="skillBundle.js"></script>
-  <script type="text/javascript" src="educationTimeline.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 
-<script>
-var col1 = "#FFBC67";
-var col2 = "#DA727E";
-var col3 = "#AC6C82";
-var col4 = "#685C79";
-var col5 = "#455C7B";
-
-function nameToColor(name){
-  var parent = name.split(".")[0]
-  switch (parent){
-    case "Classes prepa":
-      return col2
-      break;
-    case "ECN":
-      return col3
-      break;
-    case "DTU":
-      return col4
-      break;
-    case "KAIST":
-      return col5
-      break;
-    case "Perso":
-      return col1
-      break;
-  }
-
-};
-
-
-$( document ).ready(function() {
-    drawBundleSkills("skillBundle");
-});
-$( window ).resize(function() {
-  d3.select("svg").remove();
-  drawBundleSkills("skillBundle");
-});
-
-$( document ).ready(function() {
-    drawEducationTimeline("educationTimeline");
-});
-$( window ).resize(function() {
-  d3.select("svg").remove();
-  drawEducationTimeline("educationTimeline");
-});
-</script>
 
 
 
