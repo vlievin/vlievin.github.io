@@ -69,7 +69,7 @@
       }
       h1{
         font-family: 'Anton', sans-serif;
-        font-size: 4em;
+        font-size: 3em;
       }
       p{
         font-family: 'Slabo 27px', serif;
@@ -105,28 +105,45 @@
       border: 0 none;
       box-shadow: none;
     }
+    
+    .img-container{
+      display: block;
+    }
+    .circular_image {
+      border-radius:50%;
+      overflow:hidden;
+      width: 300px;
+      height: 300px;
+
+    }
+      
       
 
     </style>
   </head>
   <body>
-    
     <div class = "container">
       <div class="spacer_L">
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="card name_header">
-            <h1>Valentin Liévin</h1> 
-          </div>
+            <div class="img-container">
+              <img class="circular_image" src="img/valentin-lievin-2023.png" alt="Valentin Liévin (profile picture)">
+            </div>
+            <div>
+              <h1>Valentin Liévin, PhD</h1> 
+              <p>Machine learning researcher at <a href="https://raffle.ai">raffle.ai</a></p>
+            </div>
+          
           <!-- <div class="spacer">
           </div> -->
 
-          <div class="card">
               <div class="border_top">
                 <p>
-                Machine learning researcher at <a href="https://raffle.ai">raffle.ai</a>: retrieval-augmented and large language models.<br>
-                PhD in Machine Learning (generative models, variational inference and natural language processing) from DTU Compute (Copenhagen, Denmark) with prof. Ole Winther. Previously working at <a href="https://raffle.ai">FindZebra.com</a></p>
+                I primarly work with retrieval-augmented and large language models. I have been doing my
+                PhD in Machine Learning (generative models, variational inference and natural language processing) at DTU Compute (Copenhagen, Denmark) with prof. Ole Winther. I worked at <a href="https://findzebra.com">FindZebra.com</a>, a search engine for rare diseases.</p>
+                <p><i>valentin . lievin [ at ] gmail . com</i></p>
               </div>
           </div>
 
@@ -144,16 +161,33 @@
                   </div>
               </div>
           </div>
-
-
-
-          
-
-
         </div>
+
+        <!-- News -->
         <div class="col-md-6">
 
           <div class="card border-top">
+            <h1>News articles</h1> 
+            <div class="border-top">
+               <div class="list-group borderless">
+                  <a href="https://videnskab.dk/teknologi-innovation/kunstig-intelligens-bestaar-amerikansk-embedslaegeeksamen" class="list-group-item list-group-item-action flex-column align-items-start borderless">
+                  <div class="d-flex w-100 justify-content-between borderless shadow-none">
+                    <h5 class="mb-1">Kunstig intelligens består amerikansk embedslægeeksamen</h5>
+                  </div>
+                  <small class="text-muted">Videnskab.dk</small>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <!-- Publications -->
+        <div class="col-md-6">
+          <div class="card border-top">
+            <h1>Publications</h1> 
             <div class="border-top">
                <div class="list-group borderless">
                   <a href="deep-lvms-for-nlp.pdf" class="list-group-item list-group-item-action flex-column align-items-start borderless">
@@ -210,9 +244,9 @@
               </div>
             </div>
           </div>
-
         </div>
-      </div>
+
+      
       
       
 
